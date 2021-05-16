@@ -1,0 +1,11 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t orkhan9/dckreact -f Dockerfile.dev .
+
+script:
+  - docker run orkhan9/dckreact npm run test -- --coverage
+
+
