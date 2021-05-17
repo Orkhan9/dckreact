@@ -8,7 +8,7 @@ before_install:
 script:
   - docker run orkhan9/docker-react npm run test -- --coverage
 
-
+install: travis_wait 30 mvn install
 
 
 
